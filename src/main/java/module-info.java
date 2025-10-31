@@ -1,4 +1,4 @@
-module com.example.hellojavafx {
+module com.clarity.app {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -7,12 +7,9 @@ module com.example.hellojavafx {
     requires com.dlsc.formsfx;
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
-    requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
-    requires com.almasb.fxgl.all;
+    requires javafx.graphics;
 
-    opens com.example.hellojavafx to javafx.fxml;
-    exports com.example.hellojavafx;
-    exports com.clarity.app;
     opens com.clarity.app to javafx.fxml;
+    exports com.clarity.app;
 }

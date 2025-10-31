@@ -1,15 +1,16 @@
 package com.clarity.app;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
 import java.io.File;
 
-public class SettingsController {
+public class HelloController {
 
     @FXML
     private TextField fullNameField;
@@ -60,7 +61,7 @@ public class SettingsController {
     }
 
     private void showSuccessAlert(String title, String message) {
-        Alert alert = new Alert(AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
@@ -68,7 +69,7 @@ public class SettingsController {
     }
 
     private void showErrorAlert(String title, String message) {
-        Alert alert = new Alert(AlertType.ERROR);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
@@ -76,7 +77,7 @@ public class SettingsController {
     }
 
     private void showInfoAlert(String title, String message) {
-        Alert alert = new Alert(AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
