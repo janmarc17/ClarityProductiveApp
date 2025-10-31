@@ -9,29 +9,24 @@
 <HBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.clarity.app.SettingsController" styleClass="root-container">
 
-    <!-- LEFT SIDEBAR -->
     <VBox styleClass="sidebar" prefWidth="230" HBox.hgrow="NEVER">
         <padding>
             <Insets top="20" right="15" bottom="20" left="20"/>
         </padding>
 
-        <!-- App Logo/Title -->
         <HBox styleClass="app-header" spacing="10" alignment="CENTER_LEFT">
             <Label text="✓" styleClass="logo-icon"/>
             <Label text="Clarity" styleClass="app-title"/>
         </HBox>
 
-        <!-- Spacing -->
         <Region VBox.vgrow="ALWAYS" prefHeight="30"/>
 
-        <!-- Navigation Section Label -->
         <Label text="Overview" styleClass="section-label">
             <VBox.margin>
                 <Insets bottom="10"/>
             </VBox.margin>
         </Label>
 
-        <!-- Navigation Items -->
         <VBox spacing="5">
             <Button text="◫  Dashboard" styleClass="nav-item" alignment="CENTER_LEFT" maxWidth="Infinity"/>
             <Button text="☰  My Task" styleClass="nav-item" alignment="CENTER_LEFT" maxWidth="Infinity"/>
@@ -39,7 +34,6 @@
             <Button text="◷  Schedule" styleClass="nav-item" alignment="CENTER_LEFT" maxWidth="Infinity"/>
         </VBox>
 
-        <!-- Pinned Section -->
         <Region VBox.vgrow="ALWAYS" minHeight="20"/>
         <Label text="Pinned" styleClass="section-label">
             <VBox.margin>
@@ -47,10 +41,8 @@
             </VBox.margin>
         </Label>
 
-        <!-- Spacer to push bottom items down -->
         <Region VBox.vgrow="ALWAYS"/>
 
-        <!-- Bottom Navigation Items -->
         <VBox spacing="5">
             <Button text="⚙  Settings" styleClass="nav-item, nav-item-active" alignment="CENTER_LEFT" maxWidth="Infinity"/>
             <Button text="?  Help &amp; Support" styleClass="nav-item" alignment="CENTER_LEFT" maxWidth="Infinity"/>
@@ -58,46 +50,36 @@
         </VBox>
     </VBox>
 
-    <!-- MAIN CONTENT AREA -->
     <VBox styleClass="main-content" HBox.hgrow="ALWAYS">
         <padding>
             <Insets top="40" right="60" bottom="40" left="60"/>
         </padding>
 
-        <!-- Header Section -->
         <VBox spacing="5">
             <Label text="Settings" styleClass="page-title"/>
             <Label text="Manage your account details and set e-mail preferences" styleClass="page-subtitle"/>
         </VBox>
 
-        <!-- Spacing -->
         <Region prefHeight="40"/>
 
-        <!-- Content Area with Tabs/Sections -->
         <HBox spacing="40" VBox.vgrow="ALWAYS">
 
-            <!-- Left Side Menu -->
             <VBox spacing="15" prefWidth="180">
                 <Button text="Account" styleClass="tab-button, tab-active" maxWidth="Infinity" alignment="CENTER_LEFT"/>
                 <Button text="Privacy &amp; Security" styleClass="tab-button" maxWidth="Infinity" alignment="CENTER_LEFT"/>
                 <Button text="About Us" styleClass="tab-button" maxWidth="Infinity" alignment="CENTER_LEFT"/>
             </VBox>
 
-            <!-- Right Side Content -->
             <VBox spacing="30" HBox.hgrow="ALWAYS">
 
-                <!-- Account Header -->
                 <VBox spacing="5">
                     <Label text="Account" styleClass="section-title"/>
                     <Label text="Update your profile Settings here" styleClass="section-description"/>
                 </VBox>
 
-                <!-- Account Content -->
                 <HBox spacing="40" alignment="TOP_LEFT">
 
-                    <!-- Avatar Section -->
                     <VBox spacing="15" alignment="TOP_CENTER" prefWidth="180">
-                        <!-- Avatar Placeholder -->
                         <StackPane styleClass="avatar-container">
                             <Circle radius="60" styleClass="avatar-circle"/>
                             <Label text="👋" styleClass="avatar-emoji"/>
@@ -107,16 +89,13 @@
                         <Button text="Upload Photo" styleClass="upload-button" onAction="#handleUploadPhoto"/>
                     </VBox>
 
-                    <!-- Form Fields -->
                     <VBox spacing="20" HBox.hgrow="ALWAYS" maxWidth="450">
 
-                        <!-- Full Name -->
                         <VBox spacing="8">
                             <Label text="Full Name" styleClass="field-label"/>
                             <TextField fx:id="fullNameField" text="Chappy Patatas" styleClass="input-field"/>
                         </VBox>
 
-                        <!-- Username -->
                         <VBox spacing="8">
                             <Label text="Username" styleClass="field-label"/>
                             <HBox styleClass="input-field-container">
@@ -127,7 +106,6 @@
                             </HBox>
                         </VBox>
 
-                        <!-- Email -->
                         <VBox spacing="8">
                             <HBox spacing="5" alignment="CENTER_LEFT">
                                 <Label text="E-mail" styleClass="field-label"/>
@@ -141,7 +119,6 @@
                             </HBox>
                         </VBox>
 
-                        <!-- Password -->
                         <VBox spacing="8">
                             <Label text="Password" styleClass="field-label"/>
                             <HBox styleClass="input-field-container">
@@ -152,7 +129,6 @@
                             </HBox>
                         </VBox>
 
-                        <!-- Save Button -->
                         <HBox alignment="CENTER_RIGHT">
                             <Button text="Save" styleClass="save-button" onAction="#handleSave">
                                 <padding>
