@@ -13,4 +13,6 @@ module com.example.hellojavafx {
 
     opens com.example.hellojavafx to javafx.fxml;
     exports com.example.hellojavafx;
+    exports com.clarity.app;
+    opens com.clarity.app to javafx.fxml;
 }
