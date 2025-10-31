@@ -6,23 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * Main application class for Clarity
- * Launches the Settings window with modern UI styling
- */
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Load FXML layout
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/settings.fxml"));
         Parent root = loader.load();
 
-        // Create scene and apply CSS stylesheet
         Scene scene = new Scene(root, 1200, 700);
         scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
 
-        // Configure stage
         primaryStage.setTitle("Clarity - Settings");
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(1000);
